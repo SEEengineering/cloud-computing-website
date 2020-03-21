@@ -11,23 +11,9 @@
     backface-visibility: hidden;
     animation: slideBg 8s linear infinite 0s;
     animation-timing-function: ease-in-out;
-    background-image: url(img/5.jpg)
     
 }
 
-@keyframes slideBg {
-    0%{
-        background-image: url(img/5.jpg)
-            
-            
-    }
-     25%{
-        background-image: url(img/7.jpg)
-    }
-     50%{
-        background-image: url(img/9.jpg)
-    }
-}
 
 html, body{
     height: 100%;
@@ -36,7 +22,6 @@ html, body{
     color: #222;
     
 }
-
 
 
 

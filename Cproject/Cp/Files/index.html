@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cloud Project</title>
@@ -11,10 +12,14 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>   
+    <script src="js/slider.js"></script>
 </head>
 <body>
 
-    <p>
+
+
+
 
 <!-- Navigation -->
     <nav class= "navbar navbar-expand-md navbar-light bg-light sticky-top">
@@ -50,9 +55,77 @@
     </nav>
 
 <!--- Image Slider -->
-   <div id="SLIDE_BG">
+  
+    <script type="text/javascript"> 
+            var i = 0; 
+            var image = new Array();   
         
-        </div>
+        // LIST OF IMAGES 
+            image[0] = "img/5.jpg"; 
+            image[1] = "img/7.jpg"; 
+            image[2] = "img/9.jpg";   
+            var k = image.length-1;    
+
+        var caption = new Array(); 
+// LIST OF CAPTIONS 
+            caption[0] = ""; 
+            caption[1] = ""; 
+            caption[2] = ""; 
+
+        var link= new Array();   
+// LIST OF LINKS 
+            link[0] = "pages/nids.html"; 
+            link[1] = "pages/vr.html"; 
+            link[2] = "pages/kdash.html";   
+    
+
+        function swapImage(){ 
+                document.slide.src = image[i];
+                var el = document.getElementById("mydiv"); 
+                el.innerHTML=caption[i]; 
+                var img = document.getElementById("slide"); 
+                img.src= image[i]; 
+                var a = document.getElementById("link"); 
+                a.href= link[i]; 
+                
+
+                if(i < k ) { i++;}  
+                    else  { i = 0; } 
+                setTimeout("swapImage()",5000); 
+        } 
+        function addLoadEvent(func) { 
+            var oldonload = window.onload; 
+            if (typeof window.onload != 'function') { 
+                window.onload = func; 
+            } else  { 
+                window.onload = function() { 
+                    if (oldonload) { 
+                        oldonload(); 
+                    } 
+                    func(); 
+                } 
+            } 
+        } 
+        addLoadEvent(function() { 
+            swapImage(); 
+        });  
+    </script> 
+    <table style="border:none;background-color:transparent;"> 
+        <tr> 
+            <td> 
+                <a name="link" id="link" href="https://www.siteforinfotech.com/" target="_blank"><img name="slide" id="slide" alt 
+
+                                                                                                      ="my images" height="785" width="2085" src="image-1.png"/></a> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td align="center"style="font:small-caps bold 15px georgia; color:blue;"> 
+                <div id ="mydiv"></div>
+            </td> 
+        </tr>  
+</table>
+
+  
                
 
 <!--- Jumbotron -->
@@ -122,6 +195,8 @@
             <img src="img/desk.png" class ="img-fluid">
             </div>           
             </div>
+            
+            
 <!--- Fixed background -->
       <figure>
             <div class = "fixed-wrap">
