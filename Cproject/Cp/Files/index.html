@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cloud Project</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <script type="text/javascript" src="js/form.js"> </script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/
                  jquery.min.js"></script>
@@ -12,7 +14,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/slider.js"></script>
 </head>
 <body>
@@ -47,96 +49,101 @@
             <li class = "nav-item">
                 <a class= "nav-link" href = "#">Team</a>
             </li>
-                
-            
+            <button
+            onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Login
+            </button>
+            <li class = "nav-item">
+                <a class= "nav-link" href = "pages/form.html">/Sign-Up</a>
+            </li>
         </ul>
             </div>
         </div>
     </nav>
 
 <!--- Image Slider -->
-  
-    <script type="text/javascript"> 
-            var i = 0; 
-            var image = new Array();   
-        
-        // LIST OF IMAGES 
-            image[0] = "img/5.jpg"; 
-            image[1] = "img/7.jpg"; 
-            image[2] = "img/9.jpg";   
-            var k = image.length-1;    
 
-        var caption = new Array(); 
-// LIST OF CAPTIONS 
-            caption[0] = ""; 
-            caption[1] = ""; 
-            caption[2] = ""; 
+    <script type="text/javascript">
+            var i = 0;
+            var image = new Array();
 
-        var link= new Array();   
-// LIST OF LINKS 
-            link[0] = "pages/nids.html"; 
-            link[1] = "pages/vr.html"; 
-            link[2] = "pages/kdash.html";   
-    
+        // LIST OF IMAGES
+            image[0] = "img/5.jpg";
+            image[1] = "img/7.jpg";
+            image[2] = "img/9.jpg";
+            var k = image.length-1;
 
-        function swapImage(){ 
+        var caption = new Array();
+// LIST OF CAPTIONS
+            caption[0] = "";
+            caption[1] = "";
+            caption[2] = "";
+
+        var link= new Array();
+// LIST OF LINKS
+            link[0] = "pages/nids.html";
+            link[1] = "pages/vr.html";
+            link[2] = "pages/kdash.html";
+
+
+        function swapImage(){
                 document.slide.src = image[i];
-                var el = document.getElementById("mydiv"); 
-                el.innerHTML=caption[i]; 
-                var img = document.getElementById("slide"); 
-                img.src= image[i]; 
-                var a = document.getElementById("link"); 
-                a.href= link[i]; 
-                
+                var el = document.getElementById("mydiv");
+                el.innerHTML=caption[i];
+                var img = document.getElementById("slide");
+                img.src= image[i];
+                var a = document.getElementById("link");
+                a.href= link[i];
 
-                if(i < k ) { i++;}  
-                    else  { i = 0; } 
-                setTimeout("swapImage()",5000); 
-        } 
-        function addLoadEvent(func) { 
-            var oldonload = window.onload; 
-            if (typeof window.onload != 'function') { 
-                window.onload = func; 
-            } else  { 
-                window.onload = function() { 
-                    if (oldonload) { 
-                        oldonload(); 
-                    } 
-                    func(); 
-                } 
-            } 
-        } 
-        addLoadEvent(function() { 
-            swapImage(); 
-        });  
-    </script> 
-    <table style="border:none;background-color:transparent;"> 
-        <tr> 
-            <td> 
-                <a name="link" id="link" href="https://www.siteforinfotech.com/" target="_blank"><img name="slide" id="slide" alt 
 
-                                                                                                      ="my images" height="785" width="2085" src="image-1.png"/></a> 
-            </td> 
-        </tr> 
-        <tr> 
-            <td align="center"style="font:small-caps bold 15px georgia; color:blue;"> 
+                if(i < k ) { i++;}
+                    else  { i = 0; }
+                setTimeout("swapImage()",5000);
+        }
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+            } else  {
+                window.onload = function() {
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+                }
+            }
+        }
+        addLoadEvent(function() {
+            swapImage();
+        });
+    </script>
+    <table style="border:none;background-color:transparent;">
+        <tr>
+            <td>
+                <a name="link" id="link" href="https://www.siteforinfotech.com/" target="_blank"><img name="slide" id="slide" alt
+
+                                                                                                      ="my images" height="785" width="2085" src="image-1.png"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center"style="font:small-caps bold 15px georgia; color:blue;">
                 <div id ="mydiv"></div>
-            </td> 
-        </tr>  
+            </td>
+        </tr>
 </table>
 
-  
-               
+
+
 
 <!--- Jumbotron -->
     <div class= "container-fluid">
-    <div class= "row jumbotron">       
+    <div class= "row jumbotron">
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-            <p class="lead">This is our final year project, a final year project potfolio demonstrating in 
+            <p class="lead">This is our final year project, a final year project potfolio demonstrating in
             detail on how or projects are created and how they work</p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-            <a href="#"><button type="button" class="btn btn-outline-secondary 
+            <a href="#"><button type="button" class="btn btn-outline-secondary
                 btn-lg">Web Hosting</button></a>
         </div>
         </div>
@@ -155,7 +162,7 @@
         </div>
     </div>
         </div>
-        
+
 
 <!--- Three Column Section -->
         <div class = "container-fluid padding">
@@ -164,18 +171,18 @@
             <i class="fab fa-html5"></i>
                 <h3>HTML5</h3>
                 <P>Built with HTML</P>
-            </div>  
+            </div>
             <div class = "col-sm-12 col-md-4">
             <i class="fab fa-css3-alt"></i>
                 <h3>CSS</h3>
                 <P>Built with CSS</P>
-            </div>        
+            </div>
             <div class = "cols-xs-12 col-sm-6 col-md-4">
             <i class="fab fa-node"></i>
                 <h3>nodejs</h3>
                 <P>Built with Nodejs</P>
-            </div>                   
-            </div>       
+            </div>
+            </div>
         <hr class = "my-4">
         </div>
 
@@ -185,35 +192,35 @@
         <div class = "row padding">
             <div class =  "col-lg-6">
             <h2> What we did.....</h2>
-                
-            
-            
-                        
+
+
+
+
 
             </div>
             <div class = "col-lg-6">
             <img src="img/desk.png" class ="img-fluid">
-            </div>           
             </div>
-            
-            
+            </div>
+
+
 <!--- Fixed background -->
       <figure>
             <div class = "fixed-wrap">
           <div id="fixed">
                 </div>
-          </div>          
+          </div>
            </figure>
 <!--- Meet the team -->
             <div class = "container-fluid padding">
             <div class = "row welcome text-center">
                 <div class="col-12">
-                
-                    <h1 class="display-4">Meet The Team </h1>                
-                </div>               
+
+                    <h1 class="display-4">Meet The Team </h1>
                 </div>
-            </div>    
-            <!--- cards---->          
+                </div>
+            </div>
+            <!--- cards---->
         <div class= "container-fluid padding">
             <div class= "row padding">
             <div class = "col-md-4">
@@ -223,11 +230,11 @@
                     <h4 class="card-title">Mac</h4>
                         <p class="card-text">Backend. VrtualEyes</p>
                         <a href= "pages/vr.html" class="btn btn-outline-secondary">See Project</a>
-                    
-                    </div>             
-                </div>                              
+
+                    </div>
                 </div>
-                
+                </div>
+
                 <div class = "col-md-4">
                 <div class ="card">
                     <img class = "card-img-top" src="img/0d.jfif">
@@ -235,20 +242,20 @@
                     <h4 class="card-title">anu</h4>
                         <p class="card-text">project manager. NIDS</p>
                         <a href= "pages/nids.html" class="btn btn-outline-secondary">See Project</a>
-                    
-                    </div>             
-                </div>                              
+
+                    </div>
+                </div>
                 </div>
                 <div class = "col-md-4">
                 <div class ="card">
-                    <img class = "card-img-top" src="img/0.jfif"> 
+                    <img class = "card-img-top" src="img/0.jfif">
                     <div class = "card-body">
                     <h4 class="card-title">armen</h4>
                         <p class="card-text">FrontEnd. KDASH</p>
                         <a href= "pages/kdash.html" class="btn btn-outline-secondary">See Project</a>
-                    
-                    </div>             
-                </div>                              
+
+                    </div>
+                </div>
                 </div>
             </div>
             </div>
@@ -256,12 +263,12 @@
             <div class= "container-fluid padding">
             <div class="row text-center padding">
                 <div class="col-12">
-                <h2>Connect</h2> 
+                <h2>Connect</h2>
                 </div>
                 <div class= "col-12 social padding">
                 <a href= "https://github.com/SEEengineering/cloud-computing-website"><i class="fab fa-github"></i></a>
-                </div>    
-                </div>           
+                </div>
+                </div>
             </div>
 
 
@@ -270,26 +277,34 @@
 
 <!--- Footer -->
 
+<!--- Login/Sign-Up --->
+<div id="id01" class="modal">
 
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/user.jpg" alt="Avatar" class="avatar">
+    </div>
 
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
